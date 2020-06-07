@@ -1,4 +1,4 @@
-const cards = [
+/*const products = [
 
         {
             id: 1,
@@ -22,7 +22,18 @@ const cards = [
             price: 700 
         }
     ];
+*/
 
+let products = [];
+
+const listOfProducts = (id, image, type, title, price) => {
+    products.push({id, image, type, title, price})
+    return listOfProducts;
+}
+
+listOfProducts(1, "../assets/images/pescado.jpg", "Remera", "Reme Pescado", 700);
+listOfProducts( 2, "../assets/images/octopus.jpg", "Remera", "Reme Pulpo", 700);
+listOfProducts( 3, "../assets/images/vinyl.jpg", "Remera", "Reme Vinilo", 700);
 
 const createElement = (item) =>{
     let cardContainer = document.getElementById("card-container");
@@ -42,10 +53,9 @@ const createElement = (item) =>{
     button.innerText = "Agregar al carrito";
     
     div.appendChild(img);
-;   div.appendChild(title);
+   div.appendChild(title);
     title.appendChild(button);
 }
 
-
-        
+   
     
