@@ -44,17 +44,19 @@
         <section id="hero">
         <!--Fixed background image-->
             <section>
+                <div id="card-container" class="first-card-container">
+                    
+                </div>
 
                 <!--First THREE cards-->
-                <div id="card-container" class="first-card-container">
-
-                </div>
+                
             </section>
                 <!--Empty space with fixed background image-->
             <section>
                 <!--Another three cards-->
             </section>
         </section>
+        <!--
         <section class="footer">
         <footer>
                 <h3>
@@ -65,8 +67,9 @@
                 </address>
             </footer>
         </section>  
+        -->
         <script>
-            createElement();
+            cards.forEach(item => createElement(item));
         </script>
         
     </body>
