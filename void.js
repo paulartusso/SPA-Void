@@ -1,5 +1,6 @@
-/*const products = [
-
+const products ={
+    
+    remeras: [
         {
             id: 1,
             image: "../assets/images/pescado.jpg",
@@ -21,26 +22,30 @@
             title: "Musculosa Pulpo",
             price: 700 
         }
-    ];
-*/
+    ],
 
-let products = [];
+    varios: [
+        {
+            id: 4,
+            image: "../assets/images/mate.jpg",
+            title: "Mate Cortazar",
+            price: 400
+        },
+        {
+            id: 5,
+            image: "../assets/images/gorra.jpg",
+            title: "Gorra Ramas",
+            price: 550
+        }
+    ]
+};
 
-const listOfProducts = (id, image, type, title, price) => {
-    products.push({id, image, type, title, price})
-    return listOfProducts;
-}
-
-listOfProducts(1, "../assets/images/pescado.jpg", "Remera", "Reme Pescado", 700);
-listOfProducts( 2, "../assets/images/octopus.jpg", "Remera", "Reme Pulpo", 700);
-listOfProducts( 3, "../assets/images/vinyl.jpg", "Remera", "Reme Vinilo", 700);
-
-const createElement = (item) =>{
-    let cardContainer = document.getElementById("card-container");
+const createFirstRow = (item) =>{
+    let firstCardContainer = document.getElementById("first-card-container");
     let div = document.createElement("div");
-    div.setAttribute("class", "card")
-    cardContainer.appendChild(div);
-
+    div.setAttribute("class", "card");
+    firstCardContainer.appendChild(div);
+    
     let img = document.createElement("img");
     img.src = `img/${item.image}`;
 
@@ -53,9 +58,15 @@ const createElement = (item) =>{
     button.innerText = "Agregar al carrito";
     
     div.appendChild(img);
-   div.appendChild(title);
+    div.appendChild(title);
     title.appendChild(button);
 }
 
-   
-    
+
+const getFocus = () =>{
+    let textarea = document.getElementById("comments-textarea");
+    textarea.setAttribute("class", "focusIn");
+}
+
+
+

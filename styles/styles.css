@@ -7,7 +7,7 @@ html, body{
 }  
 
 
-/**MENU*/
+/**MENU------------------------------------------------------*/
 
 .menu-container{
     padding: 10px;
@@ -31,8 +31,8 @@ html, body{
     font-size: 20px;
 }
 #menu-bar li:hover{
-    font-size: 22px;
-    color: rgb(216, 216, 216);
+    font-size: 20.5px;
+    color: rgb(177, 140, 40);
 }
 
 #search-input{
@@ -56,7 +56,7 @@ html, body{
     color: whitesmoke;
 }
 
-/**FONDO*/
+/**FONDO*-------------------------------------*/
 
 #hero {
     background-image: url(../assets/images/white.jpg);
@@ -65,41 +65,46 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin: 0 auto;   
+    margin: 0 auto; 
 }
 #hero img {
-   width: 100%;
-   
+   width: 100%;  
 }
 
-/**CARDS*/
+/**CARDS------------------------------------------------------*/
 
-.first-card-container{
-    height: 450px;
+.card-container{
+    height: 470px;
     width: 100%;
     padding: 25px;
     background-color: black;
     position: absolute;
-    margin-top: 300px;  
+    box-sizing: border-box;
     display: flex;
     align-items: center center;
     justify-content: space-evenly;
 }
 
+.first-card-container{
+    margin-top: 600px;
+}
+
 .card{
-    height: 450px;
+    height: 430px;
     width: 26%;
     background-color: whitesmoke;
     border-radius: 4px;
-    position: relative;
-    
+    position: relative;   
+}
+.card:hover{
+    opacity: 0.5;
 }
 
 .h2{
     color: rgb(3, 23, 41);
     font-size: 24px;
     text-align: center;
-    top:0;
+    margin: 0;
 }
 
 .add-button{
@@ -112,16 +117,101 @@ html, body{
     position: relative;
     color: whitesmoke;
 }
+.add-button:hover{
+    background-color: rgb(15, 15, 14);
+    cursor: pointer;
+}
 
+/*MITACITA*/
+
+#half-hero{
+    background-image: url(../assets/images/taza.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 280px;
+}
+#half-hero img {
+   width: 100%;  
+}
+
+.half-intrusive-div{
+    background-color: rgba(21, 22, 22);
+    width: 50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.half-title{
+    background-color: whitesmoke;
+    width: 320px;
+    height: 200px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: -75px;
+}
+
+.link{
+    text-decoration: none;
+    color: whitesmoke;
+}
 
 /*FOOTER*/
 
 .footer{
     bottom: 0;
-    background-color: rgba(27, 25, 25, 0.9);
+    background-color: rgba(27, 25, 25);
+    position: relative;
     width: 100%;
     height: 130px;
-    position: fixed;
     color: whitesmoke;
-    
+    padding: 35px;
+}
+
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.span-comments-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.comment-buttons{
+    margin-left: 5px;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid whitesmoke;
+    background-color: rgba(27, 25, 25);
+    width: 115px;
+    padding: 15px;
+    color: whitesmoke;
+}
+
+
+
+.textarea{
+    background-color: rgb(27, 25, 25);
+    width: 65vw;
+    height: 40px;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+
+.focusIn{
+    width: 65vw;
+    height: 40px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(3, 23, 41);
 }

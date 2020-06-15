@@ -41,35 +41,66 @@
                 </span>
             </ul>
         </div>
-        <section id="hero">
+        <section>
         <!--Fixed background image-->
-            <section>
-                <div id="card-container" class="first-card-container">
-                    
-                </div>
+            <section  id="hero">
+                <div>
+                    <span id="first-card-container"  class="card-container first-card-container">
 
-                <!--First THREE cards-->
-                
-            </section>
-                <!--Empty space with fixed background image-->
-            <section>
-                <!--Another three cards-->
-            </section>
+                    </span>
+                </div>
+            </section>  
         </section>
-        <!--
-        <section class="footer">
-        <footer>
+
+        <section id="half-hero">
+            <div class="half-intrusive-div">
+                <div class="half-title">
+                    <h1>
+                        What do you think?
+                    </h1>
+                    <button class="add-button">
+                        <a href="#footer" class="link" onclick="getFocus()">
+                            Leave us a comment
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="second-card-container">
+
+            </div>
+        </section>
+
+        <!--CONTACTO-->
+
+            <footer id="footer" class="footer">
+                <div id="comments" class="comments-container">
+                    <label>
+                        Comentanos
+                    </label>
+                    <span class="span-comments-container">
+                        <textarea id="comments-textarea" class="textarea">
+                        </textarea>
+                        <button class="comment-buttons">
+                            Publicar
+                        </button>
+                        <button class="comment-buttons">
+                            Borrar
+                        </button>
+                    </span>
+                </div>
                 <h3>
                     Get To Know Us
-                </h3>
+                </h3 class= "h2">
                 <address>
                     Giraffe and DragonTree
                 </address>
             </footer>
-        </section>  
-        -->
+        
         <script>
-            products.forEach(item => createElement(item));
+            products.remeras.forEach(item => createFirstRow(item));
         </script>
         
     </body>
