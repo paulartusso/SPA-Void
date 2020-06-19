@@ -23,23 +23,27 @@ const products = [
         }
 ];
 
+//Crea tarjetas
+
 const createFirstRow = (item) =>{
     let firstCardContainer = document.getElementById("first-card-container");
     let div = document.createElement("div");
     div.setAttribute("class", "card");
     firstCardContainer.appendChild(div);
-   
+    
     let img = document.createElement("img");
     img.src = `img/${item.image}`;
     img.setAttribute("class", "card-img");
-
+    
     let span = document.createElement("span");
     span.setAttribute("class", "span-button-container");
-
+    
     
     let button = document.createElement("button");
     button.setAttribute("class", "add-button");
     button.innerText = "Agregar al carrito";
+    button.addEventListener("click", () => addToCart(item.id));
+    
     
     let moreButton = document.createElement("button");
     moreButton.setAttribute("class", "see-more-button");
@@ -51,7 +55,21 @@ const createFirstRow = (item) =>{
     span.appendChild(moreButton);
 }
 
+//agrega al carro de compras
 
+cart = [];
+
+const addToCart = (id) =>{
+    for(let item of products){
+        if(item.id === id){
+        cart.push(item);
+    }
+}
+    console.log(cart);
+}
+
+
+//Hace foco en el input para agregar un comentario
 
 const getFocus = () =>{
     let textarea = document.getElementById("comments-textarea");
@@ -59,17 +77,12 @@ const getFocus = () =>{
 }
 
 
+/*YOU KNOW event para comment
+const createTable = () => {
+    let td = document.createElement(td);
+    let publishButton = getElementById("publish");
+    publishButton.appendChild(td);
+}
+*/
 
-/**
- * <3
- * 
- * Hoy le tenés que mandar evento onclick al boton de agregar al carrite
- * y pushearle al mismo, pa crear la nueva lista (carrito).
- * Después evento al boton con el changuito pa desplegar un modal que les 
- * muestre a estos malditos consumistas en que innecesario producto están 
- * gastando su dinero.
- * THEN un contador en rojito para llevar el conteo de la cantidad de 
- * items. Asumo que con un return listaCarrito(?) should be enough.
- * El contadorcito posicionado según el carrite, ia tu sa, ahí arribita.
 
- */

@@ -27,8 +27,8 @@
                 <li>
                     Diseños
                 </li>
-                <li>
-                    Talles
+                <li class="log" id="logIn">
+                    Registrate
                 </li>
                 <span>
                     <input type="text" placeholder="Search" id="search-input"/>
@@ -41,8 +41,26 @@
                 </span>
             </ul>
         </div>
-        <section id="hero">
+
+        <!--HIDDEN FORM-->
+
+        <div>
+            <header>
+
+            </header>
+            <input type="text" placeholder="Nombre"/>
+            <input type="checkbox"/>
+            <button>
+                Guardar
+            </button>
+            <button>
+                Cancelar
+            </button>
+        </div>
+
         <!--Fixed background image-->
+
+        <section id="hero">
         </section>
         
         <section id="first-card-container" class="card-container">
@@ -80,7 +98,7 @@
                     <span class="span-comments-container">
                         <textarea id="comments-textarea" class="textarea">
                         </textarea>
-                        <button class="comment-buttons">
+                        <button class="comment-buttons" id="publish">
                             Publicar
                         </button>
                         <button class="comment-buttons">
