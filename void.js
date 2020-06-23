@@ -73,16 +73,19 @@ const addToCart = (id) =>{
 const createShoppingCart = (item) =>{
     let thead = document.createElement("thead");
     let th = document.createElement("th");
+    let secondTh = document.createElement("th");
     let tbody = document.createElement("tbody");
     let tr = document.createElement("tr");
     let td = document.createElement("td");
     let secondTd = document.createElement("td");
 
     thead.appendChild(th);
+    thead.appendChild(secondTh);
     th.innerHTML = "Item";
-    th.innerHTML = "Precio";
+    secondTh.innerHTML = "Precio";
     tbody.appendChild(tr);
     tr.appendChild(td);
+    tr.appendChild(secondTd);
     td.innerHTML = item.title; 
     secondTd.innerHTML = item.price;  
     return tr;    
