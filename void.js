@@ -71,16 +71,20 @@ const addToCart = (id) =>{
 //muestra el carrito de compras
 
 const createShoppingCart = (item) =>{
+    let thead = document.createElement("thead");
+    let th = document.createElement("th");
+    let tbody = document.createElement("tbody");
     let tr = document.createElement("tr");
     let td = document.createElement("td");
-    let th = document.createElement("th");
-    tr.appendChild(th);
-    tr.appendChild(td);
-    td.setAttribute("class", "cart-table");
+    let secondTd = document.createElement("td");
+
+    thead.appendChild(th);
     th.innerHTML = "Item";
     th.innerHTML = "Precio";
+    tbody.appendChild(tr);
+    tr.appendChild(td);
     td.innerHTML = item.title; 
-    td.innerHTML = item.price;  
+    secondTd.innerHTML = item.price;  
     return tr;    
 }
 
