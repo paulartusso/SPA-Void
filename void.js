@@ -5,7 +5,7 @@ const products = [
             image: "../assets/images/pescado.jpg",
             type: "Remera",
             title: "Reme Pescado",
-            price: 700
+            price: 600
         },
         {
             id: 2,
@@ -19,7 +19,7 @@ const products = [
             image: "../assets/images/vinyl.jpg",
             type: "Musculosa",
             title: "Musculosa Pulpo",
-            price: 700 
+            price: 550 
         }
 ];
 
@@ -66,6 +66,40 @@ const addToCart = (id) =>{
     }
 }
     console.log(cart);
+}
+
+//muestra el carrito de compras
+
+const createShoppingCart = (item) =>{
+    let tr = document.createElement("tr");
+    let td = document.createElement("td");
+    let th = document.createElement("th");
+    tr.appendChild(th);
+    tr.appendChild(td);
+    td.setAttribute("class", "cart-table");
+    th.innerHTML = "Item";
+    th.innerHTML = "Precio";
+    td.innerHTML = item.title; 
+    td.innerHTML = item.price;  
+    return tr;    
+}
+
+const showItems = () =>{
+    showCartModal();
+    let cartContainer = document.getElementById("cart-container");
+    let table = document.getElementById("cart-items-table");
+    cart.forEach(item => {
+    let tr= createShoppingCart(item);
+    cartContainer.appendChild(table);
+    table.appendChild(tr);
+    });
+}
+
+const showCartModal = () =>{
+    let modalContainer = document.getElementById("modal-container");
+    let cartContainer = document.getElementById("cart-container");
+    modalContainer.classList.toggle("hidden");
+    cartContainer.classList.toggle("hidden");
 }
 
 

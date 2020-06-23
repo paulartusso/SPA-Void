@@ -35,15 +35,34 @@
                     <button id="search-button" class="menu-buttons">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
-                    <button id="cart-button" class="menu-buttons">
+                    <button id="cart-button" class="menu-buttons" onclick="showItems();">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                 </span>
             </ul>
         </div>
+        <!--SHOPPING CART HIDDEN MODAL-->
+        <div class="cart-modal-container hidden" id="modal-container">
+            <div class="cart-container hidden" id="cart-container">
+                <header class="cart-modal-header">
+                    Tu lista de compras
+                </header>
+                <table class="cart-table" id="cart-items-table">
+                    
+                </table>
+                <footer>
+                    <button>
+                        Comprar
+                    </button>
+                    <button onclick="showCartModal()">
+                        Cancelar
+                    </button>
+                </footer>
 
+            </div>
+        </div>
         <!--HIDDEN FORM-->
-
+        <!--
         <div>
             <header>
 
@@ -57,7 +76,7 @@
                 Cancelar
             </button>
         </div>
-
+        -->
         <!--Fixed background image-->
 
         <section id="hero">
