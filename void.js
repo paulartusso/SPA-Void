@@ -91,15 +91,30 @@ const createShoppingCart = (item) =>{
     return tr;    
 }
 
+//Esta funcion necesita estilar elementos y amor. MUCHO amor
+
+
 const showItems = () =>{
-    showCartModal();
     let cartContainer = document.getElementById("cart-container");
-    let table = document.getElementById("cart-items-table");
-    cart.forEach(item => {
-    let tr= createShoppingCart(item);
-    cartContainer.appendChild(table);
-    table.appendChild(tr);
-    });
+    if(cart.length == 0){
+        console.log("Nada");
+        /*
+        showCartModal();
+        let messageDiv = document.createElement("div");
+        cartContainer.appendChild(messageDiv);
+        let messageTitle = document.createElement("p");
+        messageDiv.appendChild(messageTitle);
+        messageTitle.innerHTML = "Todavía no tenés nada en tu carrito";
+        */
+    } else {
+        showCartModal();
+        let table = document.getElementById("cart-items-table");
+        cart.forEach(item => {
+        let tr= createShoppingCart(item);
+        cartContainer.appendChild(table);
+        table.appendChild(tr);
+        });
+    }
 }
 
 const showCartModal = () =>{

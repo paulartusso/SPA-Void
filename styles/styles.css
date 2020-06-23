@@ -104,6 +104,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    bottom: 0;
 }
 
 /**MODAL**/
