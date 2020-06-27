@@ -47,7 +47,8 @@ const createFirstRow = (item) =>{
     
     let moreButton = document.createElement("button");
     moreButton.setAttribute("class", "see-more-button");
-    moreButton.innerText = "+";
+    moreButton.innerText = "Info";
+    moreButton.addEventListener("click", () => showInfo(item));
     
     div.appendChild(img);
     div.appendChild(span);
@@ -66,6 +67,25 @@ const addToCart = (id) =>{
     }
 }
     console.log(cart);
+}
+
+//muestra mas info sobre el artículo WHATS HAPPENING HERE
+
+const showInfo = (item) =>{
+    let modalContainer = document.getElementById("modal-container");
+    modalContainer.classList.toggle("hidden");
+    let infoModal = document.createElement("div");
+    infoModal.setAttribute("class", "info-modal");
+    let xButton = document.createElement("button");
+    xButton.innerHTML = "x";
+    infoModal.appendChild(xButton);
+    xButton.addEventListener("click", () => {infoModal.classList.toggle("hidden")
+                                            modalContainer.classList.toggle("hidden")});
+    modalContainer.appendChild(infoModal);
+    let priceItem = document.createElement("p");
+    priceItem.innerHTML = `Precio: ${item.price}`;
+    infoModal.appendChild(priceItem);
+    return infoModal;
 }
 
 //muestra el carrito de compras
