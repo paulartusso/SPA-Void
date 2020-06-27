@@ -55,6 +55,9 @@
     border: none;
     border-radius: 3px;
 }
+.see-more-button:hover{
+    background-color: rgb(122, 94, 18);
+}
 
 .info-modal{
     height: 50vh;

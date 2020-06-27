@@ -78,8 +78,9 @@ const showInfo = (item) =>{
     let xButton = document.createElement("button");
     xButton.innerHTML = "x";
     infoModal.appendChild(xButton);
-    xButton.addEventListener("click", () => {infoModal.classList.toggle("hidden")
-                                            modalContainer.classList.toggle("hidden")});
+    xButton.addEventListener("click", () => {
+        infoModal.classList.toggle("hidden")
+        modalContainer.classList.toggle("hidden")});
     modalContainer.appendChild(infoModal);
     let priceItem = document.createElement("p");
     priceItem.innerHTML = `Precio: ${item.price}`;
@@ -116,15 +117,12 @@ const createShoppingCart = (item) =>{
 const showItems = () =>{
     let cartContainer = document.getElementById("cart-container");
     if(cart.length == 0){
-        console.log("Nada");
-        /*
-        showCartModal();
-        let messageDiv = document.createElement("div");
-        cartContainer.appendChild(messageDiv);
-        let messageTitle = document.createElement("p");
-        messageDiv.appendChild(messageTitle);
-        messageTitle.innerHTML = "Todavía no tenés nada en tu carrito";
-        */
+       showCartModal();
+       let emptyCart = document.createElement("div");
+       let emptyCartMessage = document.createElement("p");
+       emptyCartMessage.innerHTML = "Todavía no agregaste nada al carrito"
+       cartContainer.appendChild(emptyCart);
+       emptyCart.appendChild(emptyCartMessage);
     } else {
         showCartModal();
         let table = document.getElementById("cart-items-table");

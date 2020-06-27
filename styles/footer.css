@@ -1,6 +1,6 @@
 .footer{
     bottom: 0;
-    background-color: rgba(27, 25, 25);
+    background-color: rgb(27, 25, 25);
     width: 100%;
     box-sizing: border-box;
     color: whitesmoke;
@@ -23,15 +23,26 @@
     margin-left: 5px;
     border: none;
     border-radius: 3px;
-    border: 1px solid whitesmoke;
-    background-color: rgba(27, 25, 25);
     width: 115px;
     padding: 15px;
     color: whitesmoke;
 }
 
+.publish-button{
+    border: 1px solid rgb(177, 140, 40);
+    background-color: rgb(27, 25, 25);
+}
+.publish-button:hover{
+    background-color: rgb(177, 140, 40);
+}
 
-
+.delete-button{
+    border: 1px solid rgb(121, 42, 42);
+    background-color: rgb(27, 25, 25);
+}
+.delete-button:hover{
+    background-color: rgb(121, 42, 42);
+}
 .textarea{
     background-color: rgb(27, 25, 25);
     width: 65vw;
