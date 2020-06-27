@@ -1,0 +1,65 @@
+
+.card-container{
+    width: 100%;
+    padding: 35px;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center center;
+    justify-content: space-evenly;
+}
+
+.card{
+    height: 80%;
+    width: 26%;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding-bottom: 30px;
+}
+
+.card:hover{
+    opacity: 0.5;
+}
+
+.card-img{
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+.span-button-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.add-button{
+    padding: 15px;
+    background-color: rgb(29, 28, 26);
+    border: none;
+    border-radius: 3px;
+    margin: 5px;
+    width: 65%;
+    color: whitesmoke;
+}
+.add-button:hover{
+    background-color: rgb(15, 15, 14);
+    cursor: pointer;
+}
+
+.see-more-button{
+    padding: 15px;
+    width: 20%;
+    background-color: rgb(177, 140, 40);
+    border: none;
+    border-radius: 3px;
+}
+
+.info-modal{
+    height: 50vh;
+    width: 400px;
+    margin-top: 200px;
+    margin-left: 270px;
+    background-color: whitesmoke;
+}

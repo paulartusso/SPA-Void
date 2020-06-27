@@ -1,0 +1,48 @@
+.footer{
+    bottom: 0;
+    background-color: rgba(27, 25, 25);
+    width: 100%;
+    box-sizing: border-box;
+    color: whitesmoke;
+    padding: 35px;
+}
+
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.span-comments-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.comment-buttons{
+    margin-left: 5px;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid whitesmoke;
+    background-color: rgba(27, 25, 25);
+    width: 115px;
+    padding: 15px;
+    color: whitesmoke;
+}
+
+
+
+.textarea{
+    background-color: rgb(27, 25, 25);
+    width: 65vw;
+    height: 40px;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+
+.focusIn{
+    width: 65vw;
+    height: 40px;
+    background-color: whitesmoke;
+    border: 2px solid rgb(3, 23, 41);
+}

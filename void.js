@@ -69,8 +69,7 @@ const addToCart = (id) =>{
     console.log(cart);
 }
 
-//muestra mas info sobre el artículo WHATS HAPPENING HERE
-
+//muestra mas info sobre el artículo 
 const showInfo = (item) =>{
     let modalContainer = document.getElementById("modal-container");
     modalContainer.classList.toggle("hidden");
