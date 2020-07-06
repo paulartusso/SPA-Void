@@ -1,0 +1,25 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "image": "../assets/images/pescado.jpg",
+            "type": "Remera",
+            "title": "Reme Pescado",
+            "price": 600
+        },
+        {
+            "id": 2,
+            "image": "../assets/images/octopus.jpg",
+            "type": "Musculosa",
+            "title": "Musculosa Pulpo",
+            "price": 700
+        },
+        {
+            "id": 3,
+            "image": "../assets/images/vinyl.jpg",
+            "type": "Remera",
+            "title": "Reme Vinilo",
+            "price": 550 
+        }
+    ]
+}
