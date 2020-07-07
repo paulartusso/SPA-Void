@@ -65,6 +65,7 @@
                         <th>Producto</th>
                         <th>Precio</th>
                         <th>Total</th>
+                        <th></th>
                     </thead>
                     <tbody>
 
@@ -152,7 +153,13 @@
             </footer>
         
         <script>
-            products.forEach(item => createFirstRow(item));
+            let baseUrl = "https://my-json-server.typicode.com/paulartusso/SPA-Void/products";
+            let products;
+            $.ajax(baseUrl)
+            .done(data => { 
+                products = data;
+                data.forEach(item => createFirstRow(item))
+            });
         </script>
         
     </body>

@@ -1,28 +1,3 @@
-const products = [
-    
-        {
-            id: 1,
-            image: "../assets/images/pescado.jpg",
-            type: "Remera",
-            title: "Reme Pescado",
-            price: 600
-        },
-        {
-            id: 2,
-            image: "../assets/images/octopus.jpg",
-            type: "Musculosa",
-            title: "Musculosa Pulpo",
-            price: 700
-        },
-        {
-            id: 3,
-            image: "../assets/images/vinyl.jpg",
-            type: "Remera",
-            title: "Reme Vinilo",
-            price: 550 
-        }
-];
-
 //agrega al carro de compras
 
 cart = [];
@@ -42,6 +17,29 @@ const addToCart = (id) =>{
     }
 }
 
+const createShoppingCart = (item) =>{
+    let tr = document.createElement("tr");
+    let td = document.createElement("td");
+    let secondTd = document.createElement("td");
+    let thirdTd = document.createElement("td");
+    let button = document.createElement("button");
+
+    tr.appendChild(td);
+    tr.appendChild(secondTd);
+    tr.appendChild(thirdTd);
+    tr.appendChild(button);
+    
+    td.innerHTML = item.title; 
+    secondTd.innerHTML = item.price;
+    button.innerText = "x";  
+    button.addEventListener("click", removeProductfromCart);
+    return tr;    
+}
+
+const removeProductfromCart = event =>{
+    event.target.parentElement.remove();
+}
+
 const showSearchInput = () =>{
     $("#search-input").toggleClass("hidden");
     $("li").toggleClass("color");  
@@ -56,17 +54,7 @@ const showCartModal = () =>{
     cartContainer.toggleClass("hidden");
 }
 
-const createShoppingCart = (item) =>{
-    let tr = document.createElement("tr");
-    let td = document.createElement("td");
-    let secondTd = document.createElement("td");
 
-    tr.appendChild(td);
-    tr.appendChild(secondTd);
-    td.innerHTML = item.title; 
-    secondTd.innerHTML = item.price;  
-    return tr;    
-}
 
 
 
