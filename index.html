@@ -19,10 +19,11 @@
         <!--Menú-->
         <div class="menu-container">
             <ul id="menu-bar">
-                
-                <li>
-                    Home
-                </li>
+                <a href="#hero" class="link">
+                    <li>
+                        Home
+                    </li>
+                </a>
                 <li>
                     Remeras
                 </li>
@@ -37,7 +38,7 @@
                         Contacto
                     </li>
                 </a>
-                <li class="log" id="logIn">
+                <li class="log" onclick="showRegisterModal();">
                     Registrate
                 </li>
                 <input type="text" placeholder="Buscar" id="search-input" class="hidden" onchange="searchByKeyWord()"/>
@@ -63,12 +64,11 @@
                 <table class="cart-table" id="cart-items-table">
                     <thead>
                         <th>Producto</th>
+                        <th>Cantidad</th>
                         <th>Precio</th>
-                        <th>Total</th>
-                        <th></th>
                     </thead>
-                    <tbody>
-
+                    <tbody id="cart-body">
+                        
                     </tbody>
                 </table>
                 <footer class="cart-modal-footer">
@@ -84,18 +84,20 @@
         </div>
         <!--HIDDEN FORM-->
         
-        <div class="hidden">
-            <header>
-
+        <div id="log-in" class="hidden info-modal">
+            <header class="modal-header">
+                Registrate
             </header>
-            <input type="text" placeholder="Nombre"/>
-            <input type="checkbox"/>
-            <button>
-                Guardar
-            </button>
-            <button>
-                Cancelar
-            </button>
+            <div>
+                <input type="text" placeholder="Nombre"/>
+                <input type="checkbox"/>
+                <button>
+                    Guardar
+                </button>
+                <button id="cancel-register-button" onclick="showRegisterModal();">
+                    Cancelar
+                </button>
+            </div>
         </div>
        
         <!--Fixed background image-->

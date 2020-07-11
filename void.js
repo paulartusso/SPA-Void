@@ -30,7 +30,7 @@ const createShoppingCart = (item) =>{
     tr.appendChild(button);
     
     td.innerHTML = item.title; 
-    secondTd.innerHTML = item.price;
+    thirdTd.innerHTML = item.price;
     button.innerText = "x";  
     button.addEventListener("click", removeProductfromCart);
     return tr;    
@@ -45,6 +45,13 @@ const showSearchInput = () =>{
     $("li").toggleClass("color");  
 }
 
+const showRegisterModal = () => {
+    $("#modal-container").toggleClass("hidden");
+    let logInModal = $("#log-in");
+    logInModal.toggleClass("hidden");
+    $("#modal-container").append(logInModal);    
+}
+
 //muestra el carrito de compras
 
 const showCartModal = () =>{
@@ -56,17 +63,6 @@ const showCartModal = () =>{
 
 
 
-
-
-
-//Hace foco en el input para agregar un comentario
-
-const getFocus = () =>{
-    let textarea = document.getElementById("comments-textarea");
-    textarea.setAttribute("class", "focusIn");
-}
-
-
 /*YOU KNOW event para comment
 const createTable = () => {
     let td = document.createElement(td);
@@ -74,7 +70,6 @@ const createTable = () => {
     publishButton.appendChild(td);
 }
 */
-
 
 
 const searchByKeyWord = (item) =>{

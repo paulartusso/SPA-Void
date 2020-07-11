@@ -36,16 +36,22 @@ const createFirstRow = (item) =>{
 const showInfo = (item) =>{
     $("#modal-container").toggleClass("hidden");
     let infoModal = $("<div></div>");
+    let header = $("<header></header>");
     infoModal.addClass("info-modal");
+    infoModal.append(header);
+    header.addClass("modal-header");
+    header.html(`${item.title}`);
     let xButton = $("<button> x </button>");
-    infoModal.append(xButton);
+    header.append(xButton);
     xButton.click (function() {
         infoModal.toggleClass("hidden");
         $("#modal-container").toggleClass("hidden")});
     $("#modal-container").append(infoModal);
-    let priceItem = $("<p></p>");
-    priceItem.html(`Precio: ${item.price}`);
-    infoModal.append(priceItem);
+    let itemPrice = $("<p></p>");
+    itemPrice.html(`Precio: ${item.price}`);
+    let itemType = $("<p></p>");
+    itemType.html(`Tipo: ${item.type}`);
+    infoModal.append(itemPrice, itemType);
     return infoModal;
 }
 

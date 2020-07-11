@@ -63,6 +63,12 @@
     height: 50vh;
     width: 400px;
     margin-top: 200px;
-    margin-left: 270px;
+    margin-left: 400px;
     background-color: whitesmoke;
+}
+
+.modal-header{
+    background-color: rgb(15, 15, 14);
+    padding: 15px;
+    color: whitesmoke;
 }
