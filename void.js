@@ -2,7 +2,6 @@
 
 cart = [];
 
-
 const addToCart = (id) =>{
     let allProducts = [...products, ...more];
     for(let item of allProducts){
@@ -34,6 +33,7 @@ const createShoppingCart = (item) =>{
     td.innerHTML = item.title; 
     thirdTd.innerHTML = item.price;
     button.innerText = "x";  
+    button.setAttribute("class", "x-button");
     button.addEventListener("click", removeProductfromCart);
     return tr;    
 }

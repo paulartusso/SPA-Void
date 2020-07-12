@@ -24,9 +24,9 @@ html, body{
 
 #half-hero{
     background-image: url(../assets/images/Cortazar.jpg);
-    height: 100vh;
+    height: 80vh;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: inherit;
     background-position: cover;
     display: flex;
     flex-direction: row-reverse;
