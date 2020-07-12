@@ -31,8 +31,8 @@
             "price": 400   
         },
         {
-            "id": 1,
-            "image": "../assets/images/mate.jpg",
+            "id": 5,
+            "image": "../assets/images/wek.jpg",
             "type": "Mate",
             "title": "Mate Cortázar",
             "price": 600

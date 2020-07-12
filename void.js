@@ -2,8 +2,10 @@
 
 cart = [];
 
+
 const addToCart = (id) =>{
-    for(let item of products){
+    let allProducts = [...products, ...more];
+    for(let item of allProducts){
         if(item.id === id){
             cart.push(item);
             let cartContainer = document.getElementById("cart-container");
