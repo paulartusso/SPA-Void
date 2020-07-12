@@ -21,7 +21,7 @@
 }
 
 .comment-buttons{
-    margin-left: 5px;
+    margin-left: 10px;
     border: none;
     border-radius: 3px;
     width: 115px;
@@ -46,15 +46,18 @@
 }
 .textarea{
     background-color: rgb(27, 25, 25);
-    width: 65vw;
+    width: 55vw;
     height: 40px;
     border-radius: 3px;
+    margin-left: 50px;
     margin-right: 15px;
 }
 
 .focusIn{
-    width: 65vw;
+    width: 55vw;
     height: 40px;
+    margin-left: 50px;
+    margin-right: 15px;
     background-color: whitesmoke;
     border: 2px solid rgb(3, 23, 41);
 }
@@ -67,6 +70,7 @@
 
 .icons-container{
     padding: 20px;
+    margin-left: 50px;
 }
 
 .bounce{

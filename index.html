@@ -56,15 +56,17 @@
                 </span>
             </ul>
         </div>
+
         <!--SHOPPING CART HIDDEN MODAL-->
         <div class="cart-modal-container hidden" id="modal-container">
             <div class="cart-container hidden" id="cart-container">
                 <header class="cart-modal-header">
                         Tu lista de compras
                 </header>
-                <p id="message">
-                    Todavía no agregaste nada a tu lista!
-                </p>
+                <div id="table-container">
+                    <p id="message">
+                        Todavía no agregaste nada a tu lista!
+                    </p>
                 <table class="cart-table" id="cart-items-table">
                     <thead>
                         <th>Producto</th>
@@ -75,14 +77,15 @@
                         
                     </tbody>
                 </table>
-                <footer class="cart-modal-footer">
+                </div>
+                <div class="cart-modal-footer">
                     <button>
                         Comprar
                     </button>
                     <button onclick="showCartModal()">
                         Cancelar
                     </button>
-                </footer>
+                </div>
 
             </div>
         </div>

@@ -7,7 +7,7 @@ const addToCart = (id) =>{
     for(let item of allProducts){
         if(item.id === id){
             cart.push(item);
-            let cartContainer = document.getElementById("cart-container");
+            let cartContainer = document.getElementById("table-container");
             let table = document.getElementById("cart-items-table");
             let tr= createShoppingCart(item);
             cartContainer.appendChild(table);
