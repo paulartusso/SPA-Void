@@ -65,6 +65,7 @@ const showInfo = (item) =>{
     header.html(`${item.title}`);
     let xButton = $("<button> x </button>");
     header.append(xButton);
+    xButton.addClass("x-button");
     xButton.click (function() {
         infoModal.toggleClass("hidden");
         $("#modal-container").toggleClass("hidden")});

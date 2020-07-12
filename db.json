@@ -25,17 +25,24 @@
     "more":[
         {
             "id": 4,
+            "image": "../assets/images/taza.jpg",
+            "type": "Taza",
+            "title": "Pajarito",
+            "price": 600   
+        },
+        {
+            "id": 5,
             "image": "../assets/images/gorra.jpg",
             "type": "Trucker",
             "title": "Gorra Ramas",
             "price": 400   
         },
         {
-            "id": 5,
+            "id": 6,
             "image": "../assets/images/weq.jpg",
             "type": "Mate",
             "title": "Mate Cortázar",
-            "price": 600
+            "price": 550
         }
     ]    
 }

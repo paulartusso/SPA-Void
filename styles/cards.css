@@ -71,4 +71,11 @@
     background-color: rgb(15, 15, 14);
     padding: 15px;
     color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.x-button{
+    border: none;
 }
