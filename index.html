@@ -125,7 +125,7 @@
         </section>
 
         <section>
-            <div id="second-card-container">
+            <div id="second-card-container" class="card-container">
 
             </div>
         </section>
@@ -135,7 +135,7 @@
             <footer id="footer" class="footer">
                 <div id="comments" class="comments-container">
                     <span class="span-comments-container">
-                        <textarea id="comments-textarea" class="textarea">
+                        <textarea id="comments-textarea" class="textarea" onclick="getFocus();">
                         </textarea>
                         <button class="comment-buttons publish-button" id="publish">
                             Publicar
@@ -161,6 +161,14 @@
             .done(data => { 
                 products = data;
                 data.forEach(item => createFirstRow(item))
+            });
+        
+            let notSoBasicUrl = "https://my-json-server.typicode.com/paulartusso/SPA-Void/more";
+            let more;
+            $.ajax(notSoBasicUrl)
+            .done(data => {
+                more = data;
+                data.forEach(item => createSecondRow(item))
             });
         </script>
         

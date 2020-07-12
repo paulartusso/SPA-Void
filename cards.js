@@ -10,6 +10,29 @@ const createFirstRow = (item) =>{
     img.src = `img/${item.image}`;
     img.setAttribute("class", "card-img");
     
+    let span = reusableFunction(item);
+    
+    div.appendChild(img);
+    div.appendChild(span);
+}
+
+const createSecondRow = (item) =>{
+    let secondCardContainer = document.getElementById("second-card-container");
+    let div = document.createElement("div");
+    div.setAttribute("class", "card");
+    secondCardContainer.appendChild(div);
+    
+    let img = document.createElement("img");
+    img.src = `img/${item.image}`;
+    img.setAttribute("class", "card-img");
+    
+    let span = reusableFunction(item);
+    
+    div.appendChild(img);
+    div.appendChild(span);
+}
+
+const reusableFunction = (item) =>{
     let span = document.createElement("span");
     span.setAttribute("class", "span-button-container");
     
@@ -24,11 +47,10 @@ const createFirstRow = (item) =>{
     moreButton.setAttribute("class", "see-more-button");
     moreButton.innerText = "Info";
     moreButton.addEventListener("click", () => showInfo(item));
-    
-    div.appendChild(img);
-    div.appendChild(span);
+
     span.appendChild(button);
     span.appendChild(moreButton);
+    return span;
 }
 
 

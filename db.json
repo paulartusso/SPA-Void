@@ -21,5 +21,22 @@
             "title": "Reme Vinilo",
             "price": 550 
         }
-    ]
+    ],
+    "more":[
+        {
+            "id": 4,
+            "image": "../assets/images/gorra.jpg",
+            "type": "Trucker",
+            "title": "Gorra Ramas",
+            "price": 400   
+        },
+        {
+            "id": 1,
+            "image": "../assets/images/mate.jpg",
+            "type": "Mate",
+            "title": "Mate Cortázar",
+            "price": 600
+        }
+    ]    
 }
+
