@@ -59,3 +59,9 @@ html, body{
     text-decoration: none;
     color: whitesmoke;
 }
+
+.size-image{
+    width: 700px;
+    height: 300px;
+    margin: 250px;
+}

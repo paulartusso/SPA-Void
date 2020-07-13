@@ -76,6 +76,12 @@
     align-items: center;
 }
 
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .x-button{
     border: none;
 }

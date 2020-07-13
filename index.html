@@ -34,7 +34,7 @@
                         Varios
                     </li>
                 </a>
-                <li>
+                <li onclick="showSizes();">
                     Talles
                 </li>
                 <a href="#ig-icon" class="link">
@@ -58,6 +58,7 @@
         </div>
 
         <!--SHOPPING CART HIDDEN MODAL-->
+
         <div class="cart-modal-container hidden" id="modal-container">
             <div class="cart-container hidden" id="cart-container">
                 <header class="cart-modal-header">
@@ -79,31 +80,41 @@
                 </table>
                 </div>
                 <div class="cart-modal-footer">
-                    <button>
+                    <button class="cart-buttons agreement-button">
                         Comprar
                     </button>
-                    <button onclick="showCartModal()">
+                    <button class="cart-buttons cancel-button" onclick="showCartModal()">
                         Cancelar
                     </button>
                 </div>
 
             </div>
         </div>
+
+        <!--TABLA DE TALLES-->
+
+        <div>
+            <button>x</button>
+            <img src="assets/images/talles.jpg"  id="sizes-modal" class="size-image hidden"/>
+        </div>
+
         <!--HIDDEN FORM-->
         
         <div id="log-in" class="hidden info-modal">
             <header class="modal-header">
                 Registrate
             </header>
-            <div>
+            <div class="form-inputs">
                 <input type="text" placeholder="Nombre"/>
                 <input type="checkbox"/>
-                <button>
-                    Guardar
-                </button>
-                <button id="cancel-register-button" onclick="showRegisterModal();">
-                    Cancelar
-                </button>
+                <span class="span-flex-container">
+                    <button class="cart-buttons agreement-button">
+                        Guardar
+                    </button>
+                    <button id="cancel-register-button" class="cart-buttons cancel-button" onclick="showRegisterModal();">
+                        Cancelar
+                    </button>
+                </span>
             </div>
         </div>
        
@@ -141,7 +152,7 @@
 
             <footer id="footer" class="footer">
                 <div id="comments" class="comments-container">
-                    <span class="span-comments-container">
+                    <span class="span-flex-container">
                         <textarea id="comments-textarea" class="textarea" onclick="getFocus();">
                         </textarea>
                         <button class="comment-buttons publish-button" id="publish">

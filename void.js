@@ -47,6 +47,13 @@ const showSearchInput = () =>{
     $("li").toggleClass("color");  
 }
 
+const showSizes = () =>{
+    $("#modal-container").toggleClass("hidden");
+    let sizesModal = $("#sizes-modal");
+    sizesModal.toggleClass("hidden");
+    $("#modal-container").append(sizesModal);
+}
+
 const showRegisterModal = () => {
     $("#modal-container").toggleClass("hidden");
     let logInModal = $("#log-in");
