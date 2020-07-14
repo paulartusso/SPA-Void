@@ -34,7 +34,7 @@ const createSecondRow = (item) =>{
 
 const reusableFunction = (item) =>{
     let span = document.createElement("span");
-    span.setAttribute("class", "span-button-container");
+    span.setAttribute("class", "span-button");
     
     
     let button = document.createElement("button");

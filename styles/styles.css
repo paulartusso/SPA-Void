@@ -55,13 +55,9 @@ html, body{
     flex-direction: column;
 }
 
-.link{
-    text-decoration: none;
-    color: whitesmoke;
-}
-
 .size-image{
     width: 700px;
     height: 300px;
-    margin: 250px;
+    margin-left: 250px;
+    margin-top: 200px;
 }

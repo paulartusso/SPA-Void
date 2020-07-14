@@ -6,40 +6,64 @@ const addToCart = (id) =>{
     let allProducts = [...products, ...more];
     for(let item of allProducts){
         if(item.id === id){
-            cart.push(item);
-            let cartContainer = document.getElementById("table-container");
-            let table = document.getElementById("cart-items-table");
-            let tr= createShoppingCart(item);
-            cartContainer.appendChild(table);
-            table.appendChild(tr);
-            let message = document.getElementById("message");
-            message.setAttribute("class", "hidden");
+            let index = cart.findIndex(item => item.id == id);
+            if(index >= 0){
+                cart[index].quantity += 1;
+                let quantity = document.getElementById(`data-${item.id}-quantity`);
+                let price = document.getElementById(`data-${item.id}-price`);
+                quantity.innerHTML = cart[index].quantity;
+                price.innerHTML = cart[index].quantity * cart[index].price;
+            } else {
+                item.quantity = 1;
+                cart.push(item);
+                let cartContainer = document.getElementById("table-container");
+                let table = document.getElementById("cart-items-table");
+                let tr= createShoppingCart(item);
+                cartContainer.appendChild(table);
+                table.appendChild(tr);
+                let message = document.getElementById("message");
+                message.setAttribute("class", "hidden");
+            }
         }
     }
 }
 
+
 const createShoppingCart = (item) =>{
     let tr = document.createElement("tr");
+    tr.id = `data-${item.id}`;
     let td = document.createElement("td");
+    td.setAttribute("class", "tr");
     let secondTd = document.createElement("td");
+    secondTd.setAttribute("class", "tr");
+    secondTd.id = `data-${item.id}-quantity`;
     let thirdTd = document.createElement("td");
+    thirdTd.setAttribute("class", "tr");
+    thirdTd.id = `data-${item.id}-price`;
     let button = document.createElement("button");
-
+    
+    td.innerHTML = item.title; 
+    secondTd.innerHTML = 1;
+    thirdTd.innerHTML = item.price;
+    
     tr.appendChild(td);
     tr.appendChild(secondTd);
     tr.appendChild(thirdTd);
     tr.appendChild(button);
-    
-    td.innerHTML = item.title; 
-    thirdTd.innerHTML = item.price;
+
     button.innerText = "x";  
     button.setAttribute("class", "x-button");
-    button.addEventListener("click", removeProductfromCart);
+    button.addEventListener("click", () => removeProductfromCart(item.id));
     return tr;    
 }
 
-const removeProductfromCart = event =>{
-    event.target.parentElement.remove();
+const removeProductfromCart = id =>{
+    let index = cart.findIndex(item => item.id == id);
+    if(index >= 0){
+        cart.splice(index, 1);
+        let tr = document.getElementById(`data-${id}`);
+        tr.remove();
+    }
 }
 
 const showSearchInput = () =>{
@@ -51,7 +75,9 @@ const showSizes = () =>{
     $("#modal-container").toggleClass("hidden");
     let sizesModal = $("#sizes-modal");
     sizesModal.toggleClass("hidden");
-    $("#modal-container").append(sizesModal);
+    let xButton = $("#x-button");
+    xButton.toggleClass("hidden");
+    $("#modal-container").append(sizesModal, xButton);
 }
 
 const showRegisterModal = () => {
@@ -72,6 +98,24 @@ const showCartModal = () =>{
 
 
 
+
+const searchByKeyWord = () =>{
+    let allProducts = [...products, ...more];
+    let filteredProducts = [];
+    let shearch = document.getElementById("search-input").value;
+    for (let item of allProducts){
+        if(item.title.indexOf(search) >= 0){
+            filteredProducts.push(item);
+        }
+    }
+    return filteredProducts;
+}
+
+
+
+
+
+
 /*YOU KNOW event para comment
 const createTable = () => {
     let td = document.createElement(td);
@@ -79,10 +123,3 @@ const createTable = () => {
     publishButton.appendChild(td);
 }
 */
-
-
-const searchByKeyWord = (item) =>{
-    let input = document.getElementById("search-input").value;
-    let filteredSearch = cart.filter(item => cart.item.type == input);
-    console.log(filteredSearch.title);
-}

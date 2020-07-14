@@ -27,11 +27,12 @@
     border-radius: 3px;
 }
 
-.span-button-container{
+.span-flex-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    padding: 10px;
 }
 
 .add-button{
@@ -39,7 +40,8 @@
     background-color: rgb(29, 28, 26);
     border: none;
     border-radius: 3px;
-    margin: 5px;
+    margin: 10px;
+    margin-left: 15px;
     width: 65%;
     color: whitesmoke;
 }
@@ -76,12 +78,3 @@
     align-items: center;
 }
 
-.form-inputs{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.x-button{
-    border: none;
-}

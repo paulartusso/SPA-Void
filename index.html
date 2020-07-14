@@ -5,10 +5,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/menu.css"/>
         <link rel="stylesheet" href="styles/cart.css"/>
+        <link rel="stylesheet" href="styles/registerModal.css"/>
         <link rel="stylesheet" href="styles/styles.css"/>
         <link rel="stylesheet" href="styles/cards.css"/>
         <link rel="stylesheet" href="styles/footer.css"/>
-        
+        <link rel="stylesheet" href="styles/common.css"/>
         <script src="https://kit.fontawesome.com/424ef3d923.js" crossorigin="anonymous"></script>
         <script src="cards.js"></script>
         <script src="void.js"></script>
@@ -81,7 +82,7 @@
                 </div>
                 <div class="cart-modal-footer">
                     <button class="cart-buttons agreement-button">
-                        Comprar
+                        Confirmar
                     </button>
                     <button class="cart-buttons cancel-button" onclick="showCartModal()">
                         Cancelar
@@ -94,20 +95,20 @@
         <!--TABLA DE TALLES-->
 
         <div>
-            <button>x</button>
+            <button id="x-button" class="hidden" onclick="showSizes();">x</button>
             <img src="assets/images/talles.jpg"  id="sizes-modal" class="size-image hidden"/>
         </div>
 
-        <!--HIDDEN FORM-->
+        <!--HIDDEN FORM - REGISTRO-->
         
         <div id="log-in" class="hidden info-modal">
             <header class="modal-header">
                 Registrate
             </header>
             <div class="form-inputs">
-                <input type="text" placeholder="Nombre"/>
-                <input type="checkbox"/>
-                <span class="span-flex-container">
+                <input type="text" placeholder="Nombre" class="inputs"/>
+                <input type="text" placeholder="Email" class="inputs"/>
+                <span class="span-buttons-container">
                     <button class="cart-buttons agreement-button">
                         Guardar
                     </button>
@@ -153,15 +154,14 @@
             <footer id="footer" class="footer">
                 <div id="comments" class="comments-container">
                     <span class="span-flex-container">
-                        <textarea id="comments-textarea" class="textarea" onclick="getFocus();">
-                        </textarea>
-                        <button class="comment-buttons publish-button" id="publish">
+                        <input id="comments-textarea" class="textarea" placeholder="Comeeeentame..." onclick="getFocus();"/>
+                        <button class="comment-buttons publish-button" id="publish" onclick="addComment();">
                             Publicar
                         </button>
-                        <button class="comment-buttons delete-button">
-                            Borrar
-                        </button>
                     </span>
+                </div>
+                <div id="here-goes-your-comment">
+
                 </div>
                 <div id="contact" class="icons-container">
                     <a href="https://www.instagram.com/i.void_/" target="blank" id="ig-icon">
