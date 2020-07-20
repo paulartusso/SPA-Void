@@ -2,9 +2,13 @@
 
 const createFirstRow = (item) =>{
     let firstCardContainer = document.getElementById("first-card-container");
+    const div = createDataRow(item)
+    firstCardContainer.appendChild(div);  
+}
+
+const createDataRow = (item) => {
     let div = document.createElement("div");
     div.setAttribute("class", "card");
-    firstCardContainer.appendChild(div);
     
     let img = document.createElement("img");
     img.src = `img/${item.image}`;
@@ -14,22 +18,13 @@ const createFirstRow = (item) =>{
     
     div.appendChild(img);
     div.appendChild(span);
+    return div;
 }
 
 const createSecondRow = (item) =>{
     let secondCardContainer = document.getElementById("second-card-container");
-    let div = document.createElement("div");
-    div.setAttribute("class", "card");
-    secondCardContainer.appendChild(div);
-    
-    let img = document.createElement("img");
-    img.src = `img/${item.image}`;
-    img.setAttribute("class", "card-img");
-    
-    let span = reusableFunction(item);
-    
-    div.appendChild(img);
-    div.appendChild(span);
+    const div = createDataRow(item);
+    secondCardContainer.appendChild(div); 
 }
 
 const reusableFunction = (item) =>{
@@ -71,9 +66,11 @@ const showInfo = (item) =>{
         $("#modal-container").toggleClass("hidden")});
     $("#modal-container").append(infoModal);
     let itemPrice = $("<p></p>");
+    itemPrice.addClass("info");
     itemPrice.html(`Precio: ${item.price}`);
     let itemType = $("<p></p>");
     itemType.html(`Tipo: ${item.type}`);
+    itemType.addClass("info");
     infoModal.append(itemPrice, itemType);
     return infoModal;
 }

@@ -6,6 +6,16 @@
     color: whitesmoke;
     padding: 10px;
 }
+.footerAfterEvent{
+    bottom: 0;
+    background-color: rgb(27, 25, 25);
+    width: 100%;
+    box-sizing: border-box;
+    color: whitesmoke;
+    padding: 10px;
+    height: 300px;
+    transition: all 2s linear;
+}
 
 .comments-container{
     display: flex;
@@ -38,6 +48,14 @@
     background-color: rgb(177, 140, 40);
 }
 
+.delete-button{
+    border: 1px solid rgb(121, 42, 42);
+    background-color: rgb(27, 25, 25);
+}
+.delete-button:hover{
+    background: rgb(121, 42, 42);
+}
+
 .textarea{
     background-color: rgb(27, 25, 25);
     width: 70vw;
@@ -55,6 +73,13 @@
     background-color: whitesmoke;
     border: 2px solid rgb(3, 23, 41);
     padding-left: 15px;
+}
+
+.li{
+    list-style: none;
+    text-decoration: none;
+    margin-left: 100px;
+    padding: 5px;
 }
 
 #contact i{

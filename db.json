@@ -4,7 +4,7 @@
             "id": 1,
             "image": "../assets/images/pescado.jpg",
             "type": "Remera",
-            "title": "Reme Pescado",
+            "title": "Remera Pescado",
             "price": 600
         },
         {
@@ -18,7 +18,7 @@
             "id": 3,
             "image": "../assets/images/vinyl.jpg",
             "type": "Remera",
-            "title": "Reme Vinilo",
+            "title": "Remera Vinilo",
             "price": 550 
         }
     ],

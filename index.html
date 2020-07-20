@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles/menu.css"/>
         <link rel="stylesheet" href="styles/cart.css"/>
         <link rel="stylesheet" href="styles/registerModal.css"/>
+        <link rel="stylesheet" href="styles/search.css"/>
         <link rel="stylesheet" href="styles/styles.css"/>
         <link rel="stylesheet" href="styles/cards.css"/>
         <link rel="stylesheet" href="styles/footer.css"/>
@@ -75,9 +76,7 @@
                         <th>Cantidad</th>
                         <th>Precio</th>
                     </thead>
-                    <tbody id="cart-body">
-                        
-                    </tbody>
+                    <tbody id="cart-body"></tbody>
                 </table>
                 </div>
                 <div class="cart-modal-footer">
@@ -93,9 +92,8 @@
         </div>
 
         <!--TABLA DE TALLES-->
-
-        <div>
-            <button id="x-button" class="hidden" onclick="showSizes();">x</button>
+        <div id="sizes-img-container">
+            <button id="x-button" class="hidden x" onclick="showSizes();">x</button>
             <img src="assets/images/talles.jpg"  id="sizes-modal" class="size-image hidden"/>
         </div>
 
@@ -125,18 +123,19 @@
         </section>
         
         <section id="first-card-container" class="card-container">
-            
+            <!--First row of products-->
         </section>  
 
         <section id="half-hero">
+            <!--Section with paralax-->
             <div class="half-intrusive-div">
                 <div class="half-title">
                     <h1>
-                        What do you think?
+                        ¡Gracias por la visita!
                     </h1>
                     <button class="add-button">
                         <a href="#footer" class="link" onclick="getFocus()">
-                            Leave us a comment
+                            Dejanos tu opinión
                         </a>
                     </button>
                 </div>
@@ -145,7 +144,7 @@
 
         <section>
             <div id="second-card-container" class="card-container">
-
+                <!--Second row of products-->
             </div>
         </section>
 
@@ -188,6 +187,14 @@
                 more = data;
                 data.forEach(item => createSecondRow(item))
             });
+
+            let search = document.getElementById("search-input");
+            search.addEventListener("keyup", (event) => {
+                if(event.keyCode == 13) {
+                    showSearchInput();
+                }
+            });
+
         </script>
         
     </body>

@@ -67,9 +67,45 @@ const removeProductfromCart = id =>{
 }
 
 const showSearchInput = () =>{
-    $("#search-input").toggleClass("hidden");
+    $("#search-input").toggleClass("hidden").addClass("focusIn");
     $("li").toggleClass("color");  
 }
+
+
+
+const searchByKeyWord = () =>{
+    let allProducts = [...products, ...more];
+    let filteredProducts = [];
+    let search = document.getElementById("search-input").value.toLowerCase();
+    for (let item of allProducts){
+        if(item.title.toLowerCase().indexOf(search) >= 0){
+            filteredProducts.push(item);     
+        }
+    }
+    showSearchResult(filteredProducts);
+}
+
+const showSearchResult = (filteredProducts) =>{
+    $("#modal-container").toggleClass("hidden");
+    let resultsContainer = $("<div></div>");
+    $("#modal-container").append(resultsContainer);
+    let div = $("<div></div>");
+    div.addClass("cart-container results-container")
+    resultsContainer.append(div);
+    let button = $("<button></button>");
+    button.html("x");
+    button.addClass("x-button x");
+    div.append(button);
+    button.click (function() {
+        $("#modal-container").toggleClass("hidden");
+        resultsContainer.toggleClass("hidden").html("");
+    });
+    filteredProducts.forEach(item =>{
+        div.append(createDataRow(item));
+    })
+}
+
+//Muestra tabla de talles
 
 const showSizes = () =>{
     $("#modal-container").toggleClass("hidden");
@@ -80,12 +116,15 @@ const showSizes = () =>{
     $("#modal-container").append(sizesModal, xButton);
 }
 
+//Muestra el modal de registro
+
 const showRegisterModal = () => {
     $("#modal-container").toggleClass("hidden");
     let logInModal = $("#log-in");
     logInModal.toggleClass("hidden");
     $("#modal-container").append(logInModal);    
 }
+
 
 //muestra el carrito de compras
 
@@ -96,30 +135,3 @@ const showCartModal = () =>{
     cartContainer.toggleClass("hidden");
 }
 
-
-
-
-const searchByKeyWord = () =>{
-    let allProducts = [...products, ...more];
-    let filteredProducts = [];
-    let shearch = document.getElementById("search-input").value;
-    for (let item of allProducts){
-        if(item.title.indexOf(search) >= 0){
-            filteredProducts.push(item);
-        }
-    }
-    return filteredProducts;
-}
-
-
-
-
-
-
-/*YOU KNOW event para comment
-const createTable = () => {
-    let td = document.createElement(td);
-    let publishButton = getElementById("publish");
-    publishButton.appendChild(td);
-}
-*/

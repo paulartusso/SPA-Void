@@ -22,7 +22,7 @@
 
 #message{
     text-align: center;
-    font-size: 24px;
+    font-size: 2px;
 }
 
 .cart-container{
@@ -40,7 +40,7 @@
 }
 
 .cart-modal-footer{
-    margin-top: 150px;
+    top: 190px;
     display: flex;
     align-items:center;
     justify-content: flex-end;
@@ -84,3 +84,4 @@ th{
     border-bottom: 0.3px solid rgb(143, 142, 142); 
     border-collapse: initial;
 }
+

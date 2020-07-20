@@ -14,12 +14,16 @@ const getFocus = () =>{
 const addComment = () =>{
     let text = document.getElementById("comments-textarea").value;
     let li = document.createElement("li");
+    li.setAttribute("class", "li");
     let button = document.createElement("button");
     button.innerText = "Eliminar";
-    button.setAttribute("class", "cancel-button")
+    button.setAttribute("class", "comment-buttons delete-button")
     li.appendChild(document.createTextNode(text));
     document.getElementById("here-goes-your-comment").appendChild(li);
     li.appendChild(button);
+    button.addEventListener("click", remove);
+}
 
-    console.log(text);
+const remove = event =>{
+    event.target.parentElement.remove();
 }
