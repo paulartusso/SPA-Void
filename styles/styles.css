@@ -36,6 +36,20 @@ html, body{
    width: 100%;  
 }
 
+#second-half-hero{
+    background-image: url(../assets/images/Geo.jpg);
+    height: 80vh;
+    background-attachment: fixed;
+    background-position: cover;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: row-reverse;  
+    width: 100%;
+}
+#half-hero img{
+    max-width: 50%;
+}
+
 .half-intrusive-div{
     background-color: rgba(21, 22, 22);
     width: 50%;
@@ -54,6 +68,7 @@ html, body{
     align-items: center;
     flex-direction: column;
 }
+
 
 .size-image{
     width: 700px;

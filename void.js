@@ -3,7 +3,7 @@
 cart = [];
 
 const addToCart = (id) =>{
-    let allProducts = [...products, ...more];
+    let allProducts = [...products, ...more, ...faceless];
     for(let item of allProducts){
         if(item.id === id){
             let index = cart.findIndex(item => item.id == id);
@@ -74,7 +74,7 @@ const showSearchInput = () =>{
 
 
 const searchByKeyWord = () =>{
-    let allProducts = [...products, ...more];
+    let allProducts = [...products, ...more, ...faceless];
     let filteredProducts = [];
     let search = document.getElementById("search-input").value.toLowerCase();
     for (let item of allProducts){

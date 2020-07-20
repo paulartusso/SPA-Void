@@ -48,17 +48,17 @@
     "faceless":[
         {
             "id": 7,
-            "image": "../assets/images/Geomet.jpg",
-            "type": "Remera",
-            "title": "Remera Mujer",
-            "price": 600
-        },
-        {
-            "id": 8,
             "image": "../assets/images/Hat.jpg",
             "type": "Remera",
             "title": "Remera Sombrero",
             "price": 600
+        },
+        {
+            "id": ,
+            "image": "../assets/images/banano.jpg",
+            "type": "Remera",
+            "title": "Remera Cthulhu",
+            "price": 700
         },
         {
             "id": 9,
