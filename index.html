@@ -194,9 +194,9 @@
                 data.forEach(item => createSecondRow(item))
             });
 
-            let notSoBasicUrl = "https://my-json-server.typicode.com/paulartusso/SPA-Void/faceless";
+            let lastUrl = "https://my-json-server.typicode.com/paulartusso/SPA-Void/faceless";
             let faceless;
-            $.ajax(notSoBasicUrl)
+            $.ajax(lastUrl)
             .done(data => {
                 faceless = data;
                 data.forEach(item => createThirdRow(item))
