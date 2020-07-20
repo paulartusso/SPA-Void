@@ -148,6 +148,12 @@
             </div>
         </section>
 
+        <section>
+            <div id="third-card-container" class="card-container">
+                <!--Third row of products-->
+            </div>
+        </section>
+
         <!--CONTACTO-->
 
             <footer id="footer" class="footer">
@@ -186,6 +192,14 @@
             .done(data => {
                 more = data;
                 data.forEach(item => createSecondRow(item))
+            });
+
+            let notSoBasicUrl = "https://my-json-server.typicode.com/paulartusso/SPA-Void/faceless";
+            let faceless;
+            $.ajax(notSoBasicUrl)
+            .done(data => {
+                faceless = data;
+                data.forEach(item => createThirdRow(item))
             });
 
             let search = document.getElementById("search-input");

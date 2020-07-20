@@ -1,11 +1,5 @@
 //Crea tarjetas
 
-const createFirstRow = (item) =>{
-    let firstCardContainer = document.getElementById("first-card-container");
-    const div = createDataRow(item)
-    firstCardContainer.appendChild(div);  
-}
-
 const createDataRow = (item) => {
     let div = document.createElement("div");
     div.setAttribute("class", "card");
@@ -19,12 +13,6 @@ const createDataRow = (item) => {
     div.appendChild(img);
     div.appendChild(span);
     return div;
-}
-
-const createSecondRow = (item) =>{
-    let secondCardContainer = document.getElementById("second-card-container");
-    const div = createDataRow(item);
-    secondCardContainer.appendChild(div); 
 }
 
 const reusableFunction = (item) =>{
@@ -48,6 +36,24 @@ const reusableFunction = (item) =>{
     return span;
 }
 
+const createFirstRow = (item) =>{
+    let firstCardContainer = document.getElementById("first-card-container");
+    const div = createDataRow(item)
+    firstCardContainer.appendChild(div);  
+}
+
+
+const createSecondRow = (item) =>{
+    let secondCardContainer = document.getElementById("second-card-container");
+    const div = createDataRow(item);
+    secondCardContainer.appendChild(div); 
+}
+
+const createThirdRow = (item) =>{
+    let thirdCardContainer = document.getElementById("third-card-container");
+    const div = createDataRow(item);
+    thirdCardContainer.appendChild(div); 
+}
 
 //muestra mas info sobre el artículo 
 const showInfo = (item) =>{
