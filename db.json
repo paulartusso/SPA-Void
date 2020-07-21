@@ -62,9 +62,9 @@
         },
         {
             "id": 9,
-            "image": "../assets/images/Capucha.jpg",
-            "type": "Remera",
-            "title": "Remera Capucha",
+            "image": "../assets/images/Mel.jpg",
+            "type": "Musculosa",
+            "title": "Musculosa",
             "price": 700 
         }
     ] 

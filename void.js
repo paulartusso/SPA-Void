@@ -103,6 +103,7 @@ const showSearchResult = (filteredProducts) =>{
     filteredProducts.forEach(item =>{
         div.append(createDataRow(item));
     })
+    console.log(filteredProducts);
 }
 
 //Muestra tabla de talles
@@ -135,3 +136,7 @@ const showCartModal = () =>{
     cartContainer.toggleClass("hidden");
 }
 
+const showConfirmationMessage = (filteredProducts) =>{
+    //mostrar confirmacion, precio total (reduce) 
+    //y medios de pago
+}

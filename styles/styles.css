@@ -86,7 +86,7 @@ html, body{
 }
 
 .title-span{
-    background-color: rgb(245, 241, 241) !important;
+    background-color: transparent !important;
     width: 45vw !important;
 }
 

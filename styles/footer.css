@@ -5,6 +5,8 @@
     box-sizing: border-box;
     color: whitesmoke;
     padding: 10px;
+    padding-top: 65px;
+    padding-bottom: 50px;
 }
 .footerAfterEvent{
     bottom: 0;
