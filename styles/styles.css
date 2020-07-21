@@ -39,18 +39,18 @@ html, body{
 #second-half-hero{
     background-image: url(../assets/images/Geo.jpg);
     height: 80vh;
+    background-color: rgb(245, 238, 238);
     background-attachment: fixed;
     background-position: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: row-reverse;  
-    width: 100%;
-}
-#half-hero img{
-    max-width: 50%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.half-intrusive-div{
+
+.half-intrusive{
     background-color: rgba(21, 22, 22);
     width: 50%;
     display: flex;
@@ -59,7 +59,7 @@ html, body{
 }
 
 .half-title{
-    background-color: whitesmoke;
+    color: whitesmoke;
     width: 320px;
     height: 200px;
     border-radius: 3px;
@@ -83,4 +83,13 @@ html, body{
     top: 5px;
     right: 5px;
     border: none;
+}
+
+.title-span{
+    background-color: rgb(245, 241, 241) !important;
+    width: 45vw !important;
+}
+
+.title{
+    color:black;
 }
