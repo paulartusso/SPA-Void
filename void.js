@@ -13,6 +13,8 @@ const addToCart = (id) =>{
                 let price = document.getElementById(`data-${item.id}-price`);
                 quantity.innerHTML = cart[index].quantity;
                 price.innerHTML = cart[index].quantity * cart[index].price;
+                let confirmButton = document.getElementById("confirmation-button");
+                confirmButton.addEventListener("click", showConfirmationMessage());
             } else {
                 item.quantity = 1;
                 cart.push(item);
@@ -23,6 +25,8 @@ const addToCart = (id) =>{
                 table.appendChild(tr);
                 let message = document.getElementById("message");
                 message.setAttribute("class", "hidden");
+                let confirmButton = document.getElementById("confirmation-button");
+                confirmButton.addEventListener("click", showConfirmationMessage());
             }
         }
     }
@@ -79,8 +83,8 @@ const searchByKeyWord = () =>{
     let search = document.getElementById("search-input").value.toLowerCase();
     for (let item of allProducts){
         if(item.title.toLowerCase().indexOf(search) >= 0){
-            filteredProducts.push(item);     
-        }
+            filteredProducts.push(item);  
+        } 
     }
     showSearchResult(filteredProducts);
 }
@@ -103,7 +107,6 @@ const showSearchResult = (filteredProducts) =>{
     filteredProducts.forEach(item =>{
         div.append(createDataRow(item));
     })
-    console.log(filteredProducts);
 }
 
 //Muestra tabla de talles
@@ -136,7 +139,8 @@ const showCartModal = () =>{
     cartContainer.toggleClass("hidden");
 }
 
-const showConfirmationMessage = (filteredProducts) =>{
+const showConfirmationMessage = () =>{
     //mostrar confirmacion, precio total (reduce) 
     //y medios de pago
+        $("#confirmation-div").toggleClass("hidden");
 }

@@ -85,3 +85,10 @@ th{
     border-collapse: initial;
 }
 
+.confirm-div{
+    height: 90vh;
+    width: 40vh;
+    background-color: whitesmoke;
+    margin-left: 200px;
+    top: 100px;
+}
