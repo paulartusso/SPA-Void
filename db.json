@@ -9,10 +9,10 @@
         },
         {
             "id": 2,
-            "image": "../assets/images/octopus.jpg",
-            "type": "Musculosa",
-            "title": "Musculosa Pulpo",
-            "price": 550
+            "image": "../assets/images/banano.jpg",
+            "type": "Remera",
+            "title": "Remera Cthulhu",
+            "price": 700
         },
         {
             "id": 3,
@@ -55,10 +55,10 @@
         },
         {
             "id": 8,
-            "image": "../assets/images/banano.jpg",
-            "type": "Remera",
-            "title": "Remera Cthulhu",
-            "price": 700
+            "image": "../assets/images/octopus.jpg",
+            "type": "Musculosa",
+            "title": "Musculosa Pulpo",
+            "price": 550
         },
         {
             "id": 9,

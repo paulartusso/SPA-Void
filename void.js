@@ -32,6 +32,26 @@ const addToCart = (id) =>{
     }
 }
 
+const showConfirmationMessage = (id) =>{
+    $("#confirmation-div").toggleClass("hidden");
+    /*
+    for(let item of allProducts){
+        if(item.id === id){
+            let index = allProducst.findIndex(item => item.id == id);
+            if(index >= 0){
+            let precioFinal = allProducts[index].reduce((acumulador, item) => {
+                return acumulador + item.precio * item.cantidad;
+            }, 0);
+        }
+    }
+    let total = $("<p><p>");
+    total.html(precioFinal);
+    $("#confirmation-div").append(total);
+    console.log(precioFinal);
+    }
+*/
+}
+
 
 const createShoppingCart = (item) =>{
     let tr = document.createElement("tr");
@@ -139,8 +159,3 @@ const showCartModal = () =>{
     cartContainer.toggleClass("hidden");
 }
 
-const showConfirmationMessage = () =>{
-    //mostrar confirmacion, precio total (reduce) 
-    //y medios de pago
-        $("#confirmation-div").toggleClass("hidden");
-}

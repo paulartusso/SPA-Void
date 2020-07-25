@@ -91,4 +91,5 @@ th{
     background-color: whitesmoke;
     margin-left: 200px;
     top: 100px;
+    z-index: 1;
 }
