@@ -19,7 +19,7 @@
     </head>
     <body >
         <!--Menú-->
-        <div class="menu-container">
+        <div id="menu" class="menu-container">
             <ul id="menu-bar">
                 <a href="#hero" class="link">
                     <li class="log">
@@ -54,7 +54,10 @@
                     Registrate
                 </li>
                 -->
-                <input type="text" placeholder="Buscar" id="search-input" class="hidden" onchange="searchByKeyWord()"/>
+                <p id="search-message" class="search-message hidden">
+                    ¿Qué estás buscando?
+                </p>
+                <input type="text" placeholder="Ej: 'Musculosa'" id="search-input" class="hidden" onchange="searchByKeyWord()"/>
                 <span>
                     <button id="search-button" class="menu-buttons" onclick="showSearchInput();">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -195,8 +198,10 @@
                     <a href="https://www.instagram.com/i.void_/" target="blank" id="ig-icon">
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <a href="https://www.facebook.com/Void-Remeras-706654259712655/?ref=settings" target="blank">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a>
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
                 </div>
             </footer>
         

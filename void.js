@@ -93,6 +93,7 @@ const removeProductfromCart = id =>{
 const showSearchInput = () =>{
     $("#search-input").toggleClass("hidden").addClass("focusIn");
     $("li").toggleClass("color");  
+    $("#search-message").toggleClass("hidden");
 }
 
 
