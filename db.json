@@ -48,24 +48,24 @@
     "faceless":[
         {
             "id": 7,
+            "image": "../assets/images/wond.jpg",
+            "type": "Musculosa",
+            "title": "Musculosa Wonder",
+            "price": 550 
+        },
+        {
+            "id": 8,
             "image": "../assets/images/Hat.jpg",
             "type": "Remera",
             "title": "Remera Sombrero",
             "price": 600
         },
         {
-            "id": 8,
+            "id": 9,
             "image": "../assets/images/octopus.jpg",
             "type": "Musculosa",
             "title": "Musculosa Pulpo",
             "price": 550
-        },
-        {
-            "id": 9,
-            "image": "../assets/images/wond.jpg",
-            "type": "Musculosa",
-            "title": "Musculosa Wonder",
-            "price": 550 
         }
     ] 
 }
