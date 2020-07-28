@@ -56,7 +56,12 @@ const showTotalPrice = () =>{
     paymentButton.click (function() {
         div.toggleClass("hidden").html("");
         gif.toggleClass("hidden");
-        $("#modal-container").append(gif, meaCulpaMessage);
+        let button = $("<button></button").addClass("x-button x").html("x");
+        $("#modal-container").append(button, gif, meaCulpaMessage);
+        button.click (function() {
+            $("#modal-container").toggleClass("hidden");
+            div.toggleClass("hidden").html("");
+        });
     });
     
 
