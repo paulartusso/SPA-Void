@@ -14,7 +14,7 @@ const addToCart = (id) =>{
                 quantity.innerHTML = cart[index].quantity;
                 price.innerHTML = cart[index].quantity * cart[index].price;
                 let confirmButton = document.getElementById("confirmation-button");
-                confirmButton.addEventListener("click", showConfirmationMessage());
+                confirmButton.addEventListener("click", showTotalPrice);
             } else {
                 item.quantity = 1;
                 cart.push(item);
@@ -26,30 +26,54 @@ const addToCart = (id) =>{
                 let message = document.getElementById("message");
                 message.setAttribute("class", "hidden");
                 let confirmButton = document.getElementById("confirmation-button");
-                confirmButton.addEventListener("click", showConfirmationMessage());
+                confirmButton.addEventListener("click", showTotalPrice);
             }
         }
     }
 }
 
-const showConfirmationMessage = (id) =>{
-    $("#confirmation-div").toggleClass("hidden");
-    /*
-    for(let item of allProducts){
-        if(item.id === id){
-            let index = allProducst.findIndex(item => item.id == id);
-            if(index >= 0){
-            let precioFinal = allProducts[index].reduce((acumulador, item) => {
-                return acumulador + item.precio * item.cantidad;
-            }, 0);
-        }
-    }
-    let total = $("<p><p>");
-    total.html(precioFinal);
-    $("#confirmation-div").append(total);
-    console.log(precioFinal);
-    }
-*/
+const showTotalPrice = () =>{
+    $("#cart-container").toggleClass("hidden");
+    let total = cart.reduce((acumulador, item) => {
+        return acumulador + item.price * item.quantity;
+    }, 0);
+    let div = $("#confirmation-div");
+    let thnkMessage = $("<h2></h2>");
+    let message = $("<p></p>")
+    let xButton = $("<button></button>").addClass("x-button").html("x")
+    let gif = $("<img></img>").attr("src", "img/../assets/images/credit-card.gif").addClass("hidden gif");
+    let meaCulpaMessage = $("<p></p>").html("Estamos trabajando en la vinculación con medios de pago").addClass("last-message");
+
+    let imgSpanContainer = $("<span></span>");
+    imgSpanContainer.addClass("payment-container");
+    let img = $("<img></img>").attr("src","img/../assets/images/mp.jpg").addClass("payment-img");
+    let check = $("<input/>").attr("type", "checkbox");
+    let secondImg = $("<img></img>").attr("src","img/../assets/images/master.png").addClass("payment-img");
+    let secondCheck = $("<input/>").attr("type", "checkbox");
+    let thirdImg = $("<img></img>").attr("src","img/../assets/images/visa.png").addClass("payment-img");
+    let thirdCheck = $("<input/>").attr("type", "checkbox");
+    let paymentButton = $("<button></button>").addClass("comment-buttons payment-button").html("Pagar");
+    paymentButton.click (function() {
+        div.toggleClass("hidden").html("");
+        gif.toggleClass("hidden");
+        $("#modal-container").append(gif, meaCulpaMessage);
+    });
+    
+
+    div.toggleClass("hidden");
+    thnkMessage.html("¡Ya casi!").addClass("info");
+    message.html(`El total de tu compra es: <strong>$${total}</strong>`).addClass("info");
+    $("#modal-container").append(div);
+    div.append(xButton);
+    xButton.click (function() {
+        $("#modal-container").toggleClass("hidden");
+        div.toggleClass("hidden").html("");
+    });
+    
+    div.append(thnkMessage, message, imgSpanContainer, paymentButton);
+    imgSpanContainer.append(img, check, secondImg, secondCheck, thirdImg, thirdCheck);
+    $("#confirmation-div-span").append(message);
+
 }
 
 

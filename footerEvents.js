@@ -2,6 +2,10 @@
 const slide = () => {
     let ig = document.getElementById("ig-icon");
     ig.setAttribute("class", "bounce");
+    setTimeout(function(){ 
+        let fb = document.getElementById("fb-icon");
+        fb.setAttribute("class", "bounce");
+     }, 2000);
 }
 
 //Hace foco en el input para agregar un comentario
