@@ -1,8 +1,7 @@
 html, body{
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    max-width: 1300px;
     font-family: 'Montserrat', sans-serif;
 }  
 
@@ -22,18 +21,55 @@ html, body{
 
 /*MITACITA*/
 
-#half-hero{
-    background-image: url(../assets/images/Cortazar.jpg);
-    height: 80vh;
-    background-attachment: fixed;
-    background-repeat: inherit;
-    background-position: cover;
-    display: flex;
-    flex-direction: row-reverse;
-    
+@media (min-width: 400px) and (max-width: 699px){
+    #half-hero{
+        background-image: url(../assets/images/Cortazar.jpg);
+        height: 80vh;
+        background-attachment: fixed;
+        margin-left: -150px;
+        
+    }
+    #half-hero img {
+        width: 100%;  
+    }
+    .half-title{
+        display: none;
+    }
 }
-#half-hero img {
-   width: 100%;  
+
+@media (min-width: 700px){
+    #half-hero{
+        background-image: url(../assets/images/Cortazar.jpg);
+        height: 80vh;
+        background-attachment: fixed;
+        background-repeat: inherit;
+        background-position: cover;
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    #half-hero img {
+        width: 100%;  
+    }
+    
+    .half-intrusive{
+        background-color: rgba(21, 22, 22);
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .half-title{
+        color: whitesmoke;
+        width: 320px;
+        height: 200px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
 }
 
 #second-half-hero{
@@ -47,26 +83,6 @@ html, body{
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-}
-
-
-.half-intrusive{
-    background-color: rgba(21, 22, 22);
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.half-title{
-    color: whitesmoke;
-    width: 320px;
-    height: 200px;
-    border-radius: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 
