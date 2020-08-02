@@ -1,22 +1,75 @@
-.footer{
-    bottom: 0;
-    background-color: rgb(27, 25, 25);
-    width: 100%;
-    box-sizing: border-box;
-    color: whitesmoke;
-    padding: 10px;
-    padding-top: 65px;
-    padding-bottom: 50px;
+@media (min-width: 400px) and (max-width: 699px){
+    .footer{
+        bottom: 0;
+        background-color: rgb(27, 25, 25);
+        width: 100%;
+        box-sizing: border-box;
+        color: whitesmoke;
+        padding: 10px;
+    }
+    .textarea{
+        background-color: rgb(27, 25, 25);
+        width: 70vw;
+        height: 40px;
+        border-radius: 3px;
+        border: 0.5px solid rgb(73, 73, 73);
+        padding-left: 15px;
+    }
+    .focusIn{
+        width: 70vw;
+        height: 40px;
+        background-color: whitesmoke;
+        border: 2px solid rgb(3, 23, 41);
+        padding-left: 15px;
+    }
+    .icons-container{
+        padding: 20px;
+    }
 }
-.footerAfterEvent{
-    bottom: 0;
-    background-color: rgb(27, 25, 25);
-    width: 100%;
-    box-sizing: border-box;
-    color: whitesmoke;
-    padding: 10px;
-    height: 300px;
-    transition: all 2s linear;
+
+
+@media (min-width: 700px){
+        .footer{
+        bottom: 0;
+        background-color: rgb(27, 25, 25);
+        width: 100%;
+        box-sizing: border-box;
+        color: whitesmoke;
+        padding: 10px;
+        padding-top: 65px;
+        padding-bottom: 50px;
+    }
+    .footerAfterEvent{
+        bottom: 0;
+        background-color: rgb(27, 25, 25);
+        width: 100%;
+        box-sizing: border-box;
+        color: whitesmoke;
+        padding: 10px;
+        height: 300px;
+        transition: all 2s linear;
+    }
+    .textarea{
+        background-color: rgb(27, 25, 25);
+        width: 70vw;
+        height: 40px;
+        border-radius: 3px;
+        border: 0.5px solid rgb(73, 73, 73);
+        margin-left: 80px;
+        padding-left: 15px;
+    }
+    .focusIn{
+        width: 70vw;
+        height: 40px;
+        margin-left: 80px;
+        background-color: whitesmoke;
+        border: 2px solid rgb(3, 23, 41);
+        padding-left: 15px;
+    }
+    .icons-container{
+        padding: 20px;
+        margin-left: 80px;
+    }
 }
 
 .comments-container{
@@ -58,25 +111,6 @@
     background: rgb(121, 42, 42);
 }
 
-.textarea{
-    background-color: rgb(27, 25, 25);
-    width: 70vw;
-    height: 40px;
-    border-radius: 3px;
-    border: 0.5px solid rgb(73, 73, 73);
-    margin-left: 80px;
-    padding-left: 15px;
-}
-
-.focusIn{
-    width: 70vw;
-    height: 40px;
-    margin-left: 80px;
-    background-color: whitesmoke;
-    border: 2px solid rgb(3, 23, 41);
-    padding-left: 15px;
-}
-
 .li{
     list-style: none;
     text-decoration: none;
@@ -88,11 +122,6 @@
     color: rgb(204, 200, 200);
     font-size: 29px;
     margin-right: 15px;
-}
-
-.icons-container{
-    padding: 20px;
-    margin-left: 80px;
 }
 
 .bounce{

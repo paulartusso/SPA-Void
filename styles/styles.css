@@ -7,27 +7,45 @@ html, body{
 
 /**FONDO*-------------------------------------*/
 
-#hero {
-    background-image: url(../assets/images/white.jpg);
-    height: 100vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 auto; 
-}
-#hero img {
-   width: 100%;  
+@media (min-width: 400px) and (max-width: 699px){
+    #hero {
+        background-image: url(../assets/images/white.jpg);
+        height: 100vh;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto; 
+    }
+    #hero img {
+    width: 100%;  
+    }
 }
 
-/*MITACITA*/
+
+@media (min-width: 700px){
+    #hero {
+        background-image: url(../assets/images/white.jpg);
+        height: 100vh;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto; 
+    }
+    #hero img {
+    width: 100%;  
+    }
+}
+
+/*FIRST FIXED IMAGE* - CORTAZAR IMG*/
 
 @media (min-width: 400px) and (max-width: 699px){
     #half-hero{
         background-image: url(../assets/images/Cortazar.jpg);
         height: 80vh;
         background-attachment: fixed;
-        margin-left: -150px;
-        
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     #half-hero img {
         width: 100%;  
@@ -43,7 +61,6 @@ html, body{
         height: 80vh;
         background-attachment: fixed;
         background-repeat: inherit;
-        background-position: cover;
         display: flex;
         flex-direction: row-reverse;
         
@@ -72,17 +89,53 @@ html, body{
     
 }
 
-#second-half-hero{
-    background-image: url(../assets/images/Geo.jpg);
-    height: 80vh;
-    background-color: rgb(245, 244, 234);
-    background-attachment: fixed;
-    background-position: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+/*SECOND FIXED IMAGE - WHITE*/
+
+@media (min-width: 400px) and (max-width: 699px){
+    #second-half-hero{
+        background-image: url(../assets/images/Geo.jpg);
+        height: 80vh;
+        background-color: rgb(245, 244, 234);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-span{
+        background-color: rgba(0, 0, 0, 0.589);
+        width: 65vw !important;
+        border-radius: 4px;
+        padding: 15px;
+    }
+    .title{
+        color:whitesmoke;
+        text-align: center;
+    }
+}
+
+@media (min-width: 700px){
+    #second-half-hero{
+        background-image: url(../assets/images/Geo.jpg);
+        height: 80vh;
+        background-color: rgb(245, 244, 234);
+        background-attachment: fixed;
+        background-position: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .title-span{
+        background-color: transparent !important;
+        width: 45vw !important;
+    }
+    .title{
+        color:black;
+    }
 }
 
 
@@ -99,13 +152,4 @@ html, body{
     top: 5px;
     right: 5px;
     border: none;
-}
-
-.title-span{
-    background-color: transparent !important;
-    width: 45vw !important;
-}
-
-.title{
-    color:black;
 }
