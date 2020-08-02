@@ -1,9 +1,13 @@
 html, body{
     margin: 0;
     padding: 0;
-    max-width: 1300px;
     font-family: 'Montserrat', sans-serif;
 }  
+
+main{
+    max-width: 1300px;
+    margin: 0 auto;
+}
 
 /**FONDO*-------------------------------------*/
 

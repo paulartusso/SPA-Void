@@ -1,9 +1,10 @@
 .menu-container{
     padding: 10px;
-    height: 65px;
+    height: 85px;
     width: 100%;
     top: 0;
     background-color: rgb(21, 22, 22);
+    box-sizing: border-box;
     position: fixed;
     z-index: 1;
 }
