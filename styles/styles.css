@@ -7,6 +7,7 @@ html, body{
 main{
     max-width: 1300px;
     margin: 0 auto;
+    background-color: rgb(207, 207, 207);
 }
 
 /**FONDO*-------------------------------------*/
@@ -155,5 +156,5 @@ main{
     position: absolute;
     top: 5px;
     right: 5px;
-    border: none;
+    font-size: 27px;
 }

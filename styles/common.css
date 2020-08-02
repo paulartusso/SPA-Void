@@ -9,5 +9,18 @@
 
 .x-button{
     border: none;
+    background-color: transparent;
+    color: whitesmoke;
+}
+.x-button:hover{
+    cursor: pointer;
+}
+
+.x-button-black{
+    border: none;
+    background-color: transparent;
     color: black;
+}
+.x-button-black:hover{
+    cursor: pointer;
 }

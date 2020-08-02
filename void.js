@@ -40,7 +40,7 @@ const showTotalPrice = () =>{
     let div = $("#confirmation-div");
     let thnkMessage = $("<h2></h2>");
     let message = $("<p></p>")
-    let xButton = $("<button></button>").addClass("x-button").html("x")
+    let xButton = $("<button></button>").addClass("x-button-black").html("x")
     let gif = $("<img></img>").attr("src", "img/../assets/images/credit-card.gif").addClass("hidden gif");
     let meaCulpaMessage = $("<p></p>").html("Estamos trabajando en la vinculación con medios de pago").addClass("last-message");
 
@@ -105,7 +105,7 @@ const createShoppingCart = (item) =>{
     tr.appendChild(button);
 
     button.innerText = "x";  
-    button.setAttribute("class", "x-button");
+    button.setAttribute("class", "x-button-black");
     button.addEventListener("click", () => removeProductfromCart(item.id));
     return tr;    
 }
