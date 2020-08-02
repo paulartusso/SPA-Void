@@ -12,7 +12,7 @@ main{
 
 /**FONDO*-------------------------------------*/
 
-@media (min-width: 400px) and (max-width: 699px){
+@media (min-width: 320px) and (max-width: 699px){
     #hero {
         background-image: url(../assets/images/white.jpg);
         height: 100vh;
@@ -43,7 +43,7 @@ main{
 
 /*FIRST FIXED IMAGE* - CORTAZAR IMG*/
 
-@media (min-width: 400px) and (max-width: 699px){
+@media (min-width: 320px) and (max-width: 699px){
     #half-hero{
         background-image: url(../assets/images/Cortazar.jpg);
         height: 80vh;
@@ -96,7 +96,7 @@ main{
 
 /*SECOND FIXED IMAGE - WHITE*/
 
-@media (min-width: 400px) and (max-width: 699px){
+@media (min-width: 320px) and (max-width: 699px){
     #second-half-hero{
         background-image: url(../assets/images/Geo.jpg);
         height: 80vh;

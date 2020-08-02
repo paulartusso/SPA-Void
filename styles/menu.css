@@ -9,7 +9,7 @@
     z-index: 1;
 }
 
-@media (min-width: 400px) and (max-width: 699px){
+@media (min-width: 320px) and (max-width: 699px){
     #menu-bar{
         display: flex;
         justify-content: space-evenly;

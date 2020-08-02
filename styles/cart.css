@@ -6,7 +6,7 @@
     position: fixed;
 }
 
-@media (min-width: 400px) and (max-width: 699px){
+@media (min-width: 320px) and (max-width: 699px){
     .cart-modal-header{
         height: 10px;
         background-color: black;
